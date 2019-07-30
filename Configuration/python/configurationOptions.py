@@ -362,6 +362,9 @@ datasets = [
    'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCsc_Ntuple',
    'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCscRpc_Ntuple',
 
+   #parked data 2018
+   'ParkingBPH4_Run2018A',
+
    #MiniAOD not stored on T3.
    'DYJetsToLL_50',
    'DYJetsToLL_5to50',
@@ -442,13 +445,18 @@ composite_dataset_definitions = {
         'ZJetsToNuNu_HT100to200',
         'ZJetsToNuNu_HT200to400',
         'ZJetsToNuNu_HT400to600',
+        'ZJetsToNuNu_HT600to800',
+        'ZJetsToNuNu_HT800to1200',
+        'ZJetsToNuNu_HT1200to2500',
         'ZJetsToNuNu_HT600toInf',
+        'ZJetsToNuNu_HT2500toInf',
     ],
     'DYJetsToLL_50ns' : [
         'DYJetsToLL_50_50ns',
         'DYJetsToLL_10to50_50ns',
     ],
     'WJetsToLNu_HT' : [
+        'WJetsToLNu_HT70to100',
         'WJetsToLNu_HT100to200',
         'WJetsToLNu_HT200to400',
         'WJetsToLNu_HT400to600',
@@ -1272,6 +1280,7 @@ nJobs = {
 
     #WJets
     'WJetsToLNu'              :  999,
+    'WJetsToLNu_HT70to100'    :  999,
     'WJetsToLNu_HT100to200'   :  999,
     'WJetsToLNu_HT200to400'   :  999,
     'WJetsToLNu_HT400to600'   :  999,
@@ -1590,6 +1599,9 @@ nJobs = {
     'QCD_bcToE_80to170'             : 153,
     'QCD_bcToE_170to250'            : 98,
     'QCD_bcToE_250toInf'            : 99,
+
+    #parked data 2018
+    'ParkingBPH4_Run2018A'  : 999,
 
     'Tau_2015D'  :  1000,
     'Tau_2016B'  :  1000,
@@ -2717,6 +2729,7 @@ maxEvents = {
 
     #WJets
     'WJetsToLNu'  :  -1,
+    'WJetsToLNu_HT70to100'   :  -1,
     'WJetsToLNu_HT100to200'   :  -1,
     'WJetsToLNu_HT200to400'   :  -1,
     'WJetsToLNu_HT400to600'   :  -1,
@@ -3035,6 +3048,9 @@ maxEvents = {
     'QCD_bcToE_80to170'             : -1,
     'QCD_bcToE_170to250'            : -1,
     'QCD_bcToE_250toInf'            : -1,
+
+    #Parked data 2018
+    'ParkingBPH4_Run2018A'  : -1,
 
     'Tau_2015D'       : -1,
     'Tau_2016B'       : -1,
@@ -4169,6 +4185,7 @@ types = {
     #WJets
     'WJetsToLNu'  :  "bgMC",
     'WJetsToLNu_HT'           :  "bgMC",
+    'WJetsToLNu_HT70to100'   :  "bgMC",
     'WJetsToLNu_HT100to200'   :  "bgMC",
     'WJetsToLNu_HT200to400'   :  "bgMC",
     'WJetsToLNu_HT400to600'   :  "bgMC",
@@ -4506,6 +4523,9 @@ types = {
     'QCD_bcToE_250toInf'            : "bgMC",
 
     'QCDFromData' : "bgMC",
+
+    #parking data 2018
+    'ParkingBPH4_Run2018A'    : "data",
 
     'Tau_2015D'    : "data",
     'Tau_2016B'    : "data",
@@ -5671,6 +5691,7 @@ colors = {
     #WJets
     'WJetsToLNu'             :  852,
     'WJetsToLNu_HT'           :  852,
+    'WJetsToLNu_HT70to100'   :  852,
     'WJetsToLNu_HT100to200'   :  852,
     'WJetsToLNu_HT200to400'   :  852,
     'WJetsToLNu_HT400to600'   :  852,
@@ -6008,6 +6029,9 @@ colors = {
     'QCD_bcToE_250toInf'            : 794,
 
     'QCDFromData' : 791,
+
+    #parked data 2018
+    'ParkingBPH4_Run2018A'  : 1,
 
     'Tau_2015D'  :  1,
     'Tau_2016B'  :  1,
@@ -7184,6 +7208,7 @@ labels = {
     #WJets
     'WJetsToLNu'              :  "W#rightarrowl#nu",
     'WJetsToLNu_HT'           :  "W#rightarrowl#nu (H_{T}>100 GeV)",
+    'WJetsToLNu_HT70to100'    :  "W#rightarrowl#nu (70<H_{T}<100 GeV)",
     'WJetsToLNu_HT100to200'   :  "W#rightarrowl#nu (100<H_{T}<200 GeV)",
     'WJetsToLNu_HT200to400'   :  "W#rightarrowl#nu (200<H_{T}<400 GeV)",
     'WJetsToLNu_HT400to600'   :  "W#rightarrowl#nu (400<H_{T}<600 GeV)",
@@ -7439,8 +7464,8 @@ labels = {
     'DYJetsToLL_5to50' : "Z#rightarrowll M(5to50)",
     'DYJetsToLL_10to50' : "Z#rightarrowll M(10to50)",
     'DYBBJetsToLL'      : "ZBB#rightarrowl^{+}l^{-}",
-    'TTJets'            : "t#bar{t} (Debug)",
-    'TTJets_Debug'      : "t#bar{t}",
+    'TTJets'            : "t#bar{t}",
+    'TTJets_Debug'      : "t#bar{t} (Debug)",
     'TTJets_inclusive'  : "t#bar{t}",
     'Diboson'           : "Diboson",
     'Diboson_Incl'      : "Diboson",
@@ -7519,6 +7544,9 @@ labels = {
     'QCD_bcToE_250toInf'            : "QCD bcToE Pt 250-Inf",
 
     'QCDFromData'     : "data-driven QCD",
+
+    #parked data 2018
+    'ParkingBPH4_Run2018A'  : "ParkingBPH4  Run2018A",
 
     'Tau_2015D'  :  "Tau 2015D data",
     'Tau_2016B'  :  "Tau 2016B data",
@@ -8691,6 +8719,7 @@ crossSections = {
     'ZZ_50ns'                       : 10.32,
 #############################################################
     # https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns
+    'WJetsToLNu_HT70to100'    : 1353.0,
     'WJetsToLNu_HT100to200'   : 1345,
     'WJetsToLNu_HT200to400'   : 359.7,
     'WJetsToLNu_HT400to600'   : 48.91,

@@ -260,7 +260,8 @@ collectionProducer.tracks = cms.EDProducer ("OSUTrackProducer",
 
     # these are only relavent for the disappearing tracks analysis
     candidateTracks = cms.InputTag ("candidateTrackProducer", ""),
-    maxDeltaRForCandidateTrackMatching = cms.double (0.2), # if cutting on dRToMatchedIsolatedTrack, must set this to be greater than the cut threshold
+    maxDeltaRForCandidateTrackMatching = cms.double (0.2), # if cutting on dRToMatchedCandidateTrack, must set this to be greater than the cut threshold
+    maxDeltaRForIsolatedTrackMatching = cms.double (0.2), # if cutting on dRToMatchedIsolatedTrack, must set this to be greater than the cut threshold
 
     # The following three parameters are used to correct the missing outer hits
     # distribution in MC for the disappearing tracks analysis.
@@ -294,6 +295,9 @@ if osusub.batchMode and types[osusub.datasetLabel] == "data":
     elif "Run2017" in osusub.dataset:
         collectionProducer.tracks.fiducialMaps.electrons[0].histFile = cms.FileInPath ("OSUT3Analysis/Configuration/data/electronFiducialMap_2017_data.root")
         collectionProducer.tracks.fiducialMaps.muons[0].histFile = cms.FileInPath ("OSUT3Analysis/Configuration/data/muonFiducialMap_2017_data.root")
+    elif "Run2018" in osusub.dataset:
+        collectionProducer.tracks.fiducialMaps.electrons[0].histFile = cms.FileInPath ("OSUT3Analysis/Configuration/data/electronFiducialMap_2018_data.root")
+        collectionProducer.tracks.fiducialMaps.muons[0].histFile = cms.FileInPath ("OSUT3Analysis/Configuration/data/muonFiducialMap_2018_data.root")
     else:
         collectionProducer.tracks.fiducialMaps.electrons[0].histFile = cms.FileInPath ("OSUT3Analysis/Configuration/data/electronFiducialMap_2015_data.root")
         collectionProducer.tracks.fiducialMaps.muons[0].histFile = cms.FileInPath ("OSUT3Analysis/Configuration/data/muonFiducialMap_2015_data.root")

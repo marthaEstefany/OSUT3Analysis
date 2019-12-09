@@ -178,6 +178,10 @@ datasets = [
    'MET_2018B',
    'MET_2018C',
    'MET_2018D',
+   'JetHT_2018A',
+   'JetHT_2018B',
+   'JetHT_2018C',
+   'JetHT_2018D',
    'NoBPTX_2015D',
    'NoBPTX_2015D_v3',
    'NoBPTX_2015D_v4',
@@ -362,6 +366,8 @@ datasets = [
    'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCsc_Ntuple',
    'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCscRpc_Ntuple',
 
+   'NoBPTX_2018D',
+
    #parked data 2018
    'ParkingBPH4_Run2018A',
 
@@ -436,7 +442,14 @@ datasets = [
   'stopToLB800_500mm_2023',
   'stopToLB800_500mm_2024',
 
-   #Sum of all backgrounds
+  'HTo4Mu125_50_50mm',
+  'HTo4Mu125_50_500mm',
+  'HTo4Mu125_50_5000mm',
+  'HTo4Mu125_20_13mm',
+  'HTo4Mu125_20_130mm',
+  'HTo4Mu125_20_1300mm',
+
+  #Sum of all backgrounds
    'Background',
 ]
 
@@ -1152,6 +1165,12 @@ composite_dataset_definitions = {
       'MET_2018C',
       'MET_2018D',
     ],
+    'JetHT_2018' : [
+      'JetHT_2018A',
+      'JetHT_2018B',
+      'JetHT_2018C',
+      'JetHT_2018D',
+    ],
     'NoBPTX_Jet_2016BCD_PromptReco' : [
        'NoBPTX_Jet_2016B_PromptReco_v2',
        'NoBPTX_Jet_2016C_PromptReco_v2',
@@ -1349,6 +1368,11 @@ nJobs = {
     'MET_2018B' : 295,
     'MET_2018C' : 315,
     'MET_2018D' : 1625,
+
+  'JetHT_2018A' : 2852,
+  'JetHT_2018B' : 1448,
+  'JetHT_2018C' : 1067,
+  'JetHT_2018D' : 5160,
     ############################################################################
 
     ############################################################################
@@ -2511,6 +2535,8 @@ nJobs = {
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCsc_Ntuple' : 999,
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCscRpc_Ntuple' : 999,
 
+    'NoBPTX_2018D' : 1657,
+
     #rpc study
     'GluinoToGChi0_1200_1000_noiseFrate0p4' : 5,
     'GluinoToGChi0_1200_1000_noiseFrate0p6' : 5,
@@ -2537,6 +2563,12 @@ nJobs = {
   'stopToLB800_500mm_2023' : 5,
   'stopToLB800_500mm_2024' : 5,
 
+  'HTo4Mu125_50_50mm' : 15,
+  'HTo4Mu125_50_500mm' : 15,
+  'HTo4Mu125_50_5000mm' : 15,
+  'HTo4Mu125_20_13mm' : 15,
+  'HTo4Mu125_20_130mm' : 15,
+  'HTo4Mu125_20_1300mm' : 15,
 }
 
 maxEvents = {
@@ -2624,6 +2656,11 @@ maxEvents = {
     'MET_2018B' : -1,
     'MET_2018C' : -1,
     'MET_2018D' : -1,
+
+    'JetHT_2018A' : -1,
+    'JetHT_2018B' : -1,
+    'JetHT_2018C' : -1,
+    'JetHT_2018D' : -1,
     ############################################################################
 
     ############################################################################
@@ -3791,6 +3828,8 @@ maxEvents = {
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCsc_Ntuple' : -1,
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCscRpc_Ntuple' : -1,
 
+    'NoBPTX_2018D' : -1,
+
     #rpc study
     'GluinoToGChi0_1200_1000_noiseFrate0p4' : -1,
     'GluinoToGChi0_1200_1000_noiseFrate0p6' : -1,
@@ -3815,6 +3854,13 @@ maxEvents = {
   'stopToLB800_500mm_2021': -1,
   'stopToLB800_500mm_2023' : -1,
   'stopToLB800_500mm_2024' : -1,
+
+  'HTo4Mu125_50_50mm' : -1,
+  'HTo4Mu125_50_500mm' : -1,
+  'HTo4Mu125_50_5000mm' : -1,
+  'HTo4Mu125_20_13mm' : -1,
+  'HTo4Mu125_20_130mm' : -1,
+  'HTo4Mu125_20_1300mm' : -1,
 
 }
 
@@ -3914,6 +3960,12 @@ types = {
     'MET_2018B'        : "data",
     'MET_2018C'        : "data",
     'MET_2018D'        : "data",
+
+    'JetHT_2018'         : "data",
+    'JetHT_2018A'        : "data",
+    'JetHT_2018B'        : "data",
+    'JetHT_2018C'        : "data",
+    'JetHT_2018D'        : "data",
     ############################################################################
 
     ############################################################################
@@ -5129,6 +5181,8 @@ types = {
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCsc_Ntuple' : 'data',
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCscRpc_Ntuple' : 'data',
 
+    'NoBPTX_2018D' : 'data',
+
     #rpc study
     'GluinoToGChi0_1200_1000_noiseFrate0p4' : "signalMC",
     'GluinoToGChi0_1200_1000_noiseFrate0p6' : "signalMC",
@@ -5151,6 +5205,13 @@ types = {
   'stopToLB800_500mm_2021': "signalMC",
   'stopToLB800_500mm_2023' : "signalMC",
   'stopToLB800_500mm_2024' : "signalMC",
+
+  'HTo4Mu125_50_50mm' : "signalMC",
+  'HTo4Mu125_50_500mm' : "signalMC",
+  'HTo4Mu125_50_5000mm' : "signalMC",
+  'HTo4Mu125_20_13mm' : "signalMC",
+  'HTo4Mu125_20_130mm' : "signalMC",
+  'HTo4Mu125_20_1300mm' : "signalMC",
 
 }
 
@@ -5247,6 +5308,12 @@ colors = {
     'MET_2018B'        : 1,
     'MET_2018C'        : 1,
     'MET_2018D'        : 1,
+
+    'JetHT_2018'         : 1,
+    'JetHT_2018A'        : 1,
+    'JetHT_2018B'        : 1,
+    'JetHT_2018C'        : 1,
+    'JetHT_2018D'        : 1,
     ############################################################################
 
     ############################################################################
@@ -6461,6 +6528,8 @@ colors = {
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCsc_Ntuple' : 1,
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCscRpc_Ntuple' : 2,
 
+    'NoBPTX_2018D' : 1,
+
     #rpc study
     'GluinoToGChi0_1200_1000_noiseFrate0p4' : 7,
     'GluinoToGChi0_1200_1000_noiseFrate0p6' : 6,
@@ -6484,6 +6553,12 @@ colors = {
   'stopToLB800_500mm_2023' : 2,
   'stopToLB800_500mm_2024' : 4,
 
+  'HTo4Mu125_50_50mm' : 1,
+  'HTo4Mu125_50_500mm' : 2,
+  'HTo4Mu125_50_5000mm' : 4,
+  'HTo4Mu125_20_13mm' : 1,
+  'HTo4Mu125_20_130mm' : 2,
+  'HTo4Mu125_20_1300mm' : 4,
 
 }
 
@@ -6592,6 +6667,12 @@ labels = {
     'MET_2018B'        : "MET_2018B data",
     'MET_2018C'        : "MET_2018C data",
     'MET_2018D'        : "MET_2018D data",
+
+    'JetHT_2018'         : "JetHT 2018 data",
+    'JetHT_2018A'        : "JetHT 2018A data",
+    'JetHT_2018B'        : "JetHT 2018B data",
+    'JetHT_2018C'        : "JetHT 2018C data",
+    'JetHT_2018D'        : "JetHT 2018D data",
     ############################################################################
 
     ############################################################################
@@ -7813,6 +7894,8 @@ labels = {
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCsc_Ntuple' : 'NoBPTX 2017 Cosmic data, DTs and CSCs',
     'NoBPTX_2017E_v1_PromptReco_CosmicTopAndBottom_DtCscRpc_Ntuple' : 'NoBPTX 2017 Cosmic data, DTs, CSCs, and RPCs',
 
+    'NoBPTX_2018D' : 'NoBPTX 2018D data',
+
     #rpc study
     'GluinoToGChi0_1200_1000_noiseFrate0p4' : "#tilde{g} #rightarrow g#tilde{#chi}^{0} (m_{#tilde{g}} = 1200 GeV, m_{#tilde{#chi}^{0}} = 1000 GeV, Frate0p4)",
     'GluinoToGChi0_1200_1000_noiseFrate0p6' : "#tilde{g} #rightarrow g#tilde{#chi}^{0} (m_{#tilde{g}} = 1200 GeV, m_{#tilde{#chi}^{0}} = 1000 GeV, Frate0p6)",
@@ -7835,6 +7918,13 @@ labels = {
   'stopToLB800_500mm_2021': "#tilde{t}#tilde{t}#rightarrow lb lb, M=800 GeV, c#tau=500 mm, 2021",
   'stopToLB800_500mm_2023' : "#tilde{t}#tilde{t}#rightarrow lb lb, M=800 GeV, c#tau=500 mm, 2023",
   'stopToLB800_500mm_2024' : "#tilde{t}#tilde{t}#rightarrow lb lb, M=800 GeV, c#tau=500 mm, 2024",
+
+  'HTo4Mu125_50_50mm' : "H#rightarrow XX#rightarrow 4#mu, M_H=125 GeV, M_X=50 GeV, c#tau=50mm",
+  'HTo4Mu125_50_500mm' : "H#rightarrow XX#rightarrow 4#mu, M_H=125 GeV, M_X=50 GeV, c#tau=500mm",
+  'HTo4Mu125_50_5000mm' : "H#rightarrow XX#rightarrow 4#mu, M_H=125 GeV, M_X=50 GeV, c#tau=5000mm",
+  'HTo4Mu125_20_13mm' : "H#rightarrow XX#rightarrow 4#mu, M_H=125 GeV, M_X=20 GeV, c#tau=13mm",
+  'HTo4Mu125_20_130mm' : "H#rightarrow XX#rightarrow 4#mu, M_H=125 GeV, M_X=20 GeV, c#tau=130mm",
+  'HTo4Mu125_20_1300mm' : "H#rightarrow XX#rightarrow 4#mu, M_H=125 GeV, M_X=20 GeV, c#tau=1300mm",
 
 
 }
@@ -8699,6 +8789,21 @@ crossSections = {
   'stopToLB800_500mm_2023' : 0.0283338,
   'stopToLB800_500mm_2024' : 0.0283338,
 
+  # ggF H cross section from here: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageAt1314TeV2014 (43.93 pb)
+  # BR for ZD-->ll from table 2 here: https://arxiv.org/pdf/1412.0018.pdf
+  #'HTo4Mu125_50_50mm' : 0.743158, #43.93pb * (0.244/2)^2 br for 2 ZD(50)->mumu
+  #'HTo4Mu125_50_500mm' : 0.743158,
+  #'HTo4Mu125_50_5000mm' : 0.743158,
+  #'HTo4Mu125_20_13mm' : 1.02102, #43.93pb * (0.286/2)^2 br for 2 ZD(20)->mumu
+  #'HTo4Mu125_20_130mm' : 1.02102,
+  #'HTo4Mu125_20_1300mm' : 1.02102,
+
+  'HTo4Mu125_50_50mm' : 43.93,
+  'HTo4Mu125_50_500mm' : 43.93,
+  'HTo4Mu125_50_5000mm' : 43.93,
+  'HTo4Mu125_20_13mm' : 43.93,
+  'HTo4Mu125_20_130mm' : 43.93,
+  'HTo4Mu125_20_1300mm' : 43.93,
 
 }
 
@@ -8787,10 +8892,10 @@ def lifetime(sample):
     return lt.replace("p",".")
 
 # generate list of masses
-masses = [str(i*100) for i in range(2, 19)]
+masses = [str(i*100) for i in range(1, 19)]
 # generate list of lifetimes
-lifetimes = ["%g" % (0.1*i*(pow(10, j))) for j in range(4) for i in range(1, 10)]
-lifetimes.append("1000")
+lifetimes = ["%g" % (0.01*i*(pow(10, j))) for j in range(6) for i in range(1, 10)]
+lifetimes.append("10000")
 lifetimes = [lt.replace(".", "p") for lt in lifetimes]
 
 # generate list of sample names from masses, lifetimes
@@ -8801,6 +8906,7 @@ datasets.extend(signal_datasets)
 composite_dataset_definitions['DisplacedSUSYSignal'] = signal_datasets
 
 signal_crossSections = {
+    '100'  : 1521.11,
     '200'  : 64.5085,
     '300'  : 8.51615,
     '400'  : 1.83537,
@@ -8833,7 +8939,8 @@ for index, sample in enumerate(signal_datasets):
 
     sourceCTau = 0.1 * 10**(math.ceil(math.log10(float(lifetime(sample)))))
     # special case
-    if lifetime(sample) == "0.1": sourceCTau = 0.1 * 1.0
+    if float(lifetime(sample)) <= 0.1: sourceCTau = 0.1 * 1.0
+    if float(lifetime(sample)) > 1000.: sourceCTau = 100.0
     destinationCTau = 0.1 * float(lifetime(sample))
 
     rulesForLifetimeReweighting[sample] = [lifetimeReweightingRule([1000006], [sourceCTau], [destinationCTau], True)]
